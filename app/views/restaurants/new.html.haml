@@ -1,0 +1,16 @@
+-# =form_with model: @restaurant do |f|
+-#   =f.label '名前'
+-#   =f.text_field :name
+-#   =f.label '住所'
+-#   =f.text_field :address
+-#   =f.submit '登録する'
+
+=render 'form'
+
+-# =bootstrap_form_with model: @restaurant, local: true do |f|
+-#   =f.text_field :name, placeholder: "name"
+-#   =f.text_field :address, placeholder: "address"
+-#   .form-group
+-#     =f.label "電話番号"
+-#     =f.text_field_without_bootstrap :telephone, placeholder: "telephone", class: "form-control"
+-#   =f.submit

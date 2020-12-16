@@ -1,0 +1,17 @@
+-# -index = 1
+-# -@restaurants.each do |restaurant|
+-#   -# =restaurant.name
+-#   #{index}.
+-#   =link_to restaurant.name, restaurant_path(restaurant.id)
+-#   -index += 1
+-#   %br
+%h1 〜Ramen　Guide〜
+%p 全国のおすすめラーメン屋さんを紹介しています。
+
+.main
+- @restaurants.each_with_index do |restaurant, index|
+  #{index + 1}.
+  =link_to restaurant.name, restaurant_path(restaurant.id)
+  %br
+%hr
+=link_to "新規ラーメン店登録", new_restaurant_path

@@ -1,0 +1,12 @@
+レストラン名：#{@restaurant.name}
+%br
+住所：#{@restaurant.address}
+%br
+- if @restaurant.telephone
+  電話番号：#{@restaurant.telephone}
+%hr
+=link_to "一覧に戻る", restaurants_path
+%br
+=link_to "登録内容を編集する", edit_restaurant_path(@restaurant)
+%br
+=link_to "削除する", restaurant_path(@restaurant), method: :delete, data: {confirm: "削除しますか？"}
